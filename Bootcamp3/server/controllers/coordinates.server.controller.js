@@ -34,7 +34,7 @@ module.exports = function(req, res, next) {
         */
         if (error) throw error;
 
-        contents = JSON.parse(body);
+        var contents = JSON.parse(body);
         req.results = contents.results[0].geometry;
         //  req.results = stores you coordinates
         next();
